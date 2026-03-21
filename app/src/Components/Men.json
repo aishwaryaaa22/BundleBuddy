@@ -1,0 +1,102 @@
+[
+  {
+    "id": 900,
+    "name": "T-shirt",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Black",
+    "description": "Black baggy cotton T-shirt",
+    "imgUrl":"/imagethree.jpg",
+    "size":"M",
+    "category":"T-shirt"
+    
+  },
+  {
+    "id": 1000,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": "699/-",
+    "country": "India",
+    "color": "Green",
+    "description": "A Green printed cap",
+     "imgUrl":"/cap.webp",
+     "size":"L",
+     "category":"Cap"
+  },
+  {
+    "id": 1100,
+    "name": "Lower",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Black",
+    "description": "Black cotton lower",
+     "imgUrl":"/Mentwo.webp",
+     "size":"S",
+     "category":"Lower"
+  },
+  {
+    "id": 1200,
+    "name": "Jacket",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Green",
+    "description": "Green baggy jacket",
+    "imgUrl":"/Menfour.jpg",
+    "size":"L",
+    "category":"Jacket"
+  },
+  {
+    
+    "id": 1300,
+    "name": "Shirt",
+    "brand": "BundleBuddy",
+    "price":" 699/-",
+    "country": "India",
+    "color": "Black",
+    "description": "A black cotton shirt",
+     "imgUrl":"/Menthree.webp",
+     "size":"M",
+    "category":"Shirt"
+
+  },
+  {
+    "id": 1400,
+    "name": "Socks",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "White",
+    "description": "White cotton socks",
+     "imgUrl":"/imageseven.webp",
+     "size":"L",
+    "category":"Socks"
+  },
+  {
+    "id": 1500,
+    "name": "T-shirt",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Blue",
+    "description": "White blue cotton T-shirt",
+    "imgUrl":"/Menfive.jpg",
+    "size":"L",
+    "category":"T-shirt"
+  },
+  {
+    
+    "id": 1600,
+    "name": "T-shirt",
+    "brand": "BundleBuddy",
+    "price": "699/-",
+    "country": "India",
+    "color": "Beige",
+    "description": "A Beige T-shirt",
+     "imgUrl":"/beige.webp",
+     "size":"L",
+    "category":"T-shirt"
+  }
+]

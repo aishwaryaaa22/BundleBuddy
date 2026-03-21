@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "Lower",
+    "brand": "BundleBuddy",
+    "price": 1200,
+    "country": "India",
+    "color": "Grey",
+    "description": "Grey cotton lower",
+    "imgUrl":"https://www.bonkerscorner.com/cdn/shop/files/grey-melange-wide-leg-xs-bonkerscorner-store-33688998117476_defc8c38-9ba2-44d8-97f4-487dc4f59f9b.jpg?v=1753507300",
+    "add":"ADD",
+    "Category":"Women",
+    "size":"M"
+  },
+  {
+    "id": 2,
+    "name": "Baggy Tshirt",
+    "brand": "BundleBuddy",
+    "price": 1300,
+    "country": "India",
+    "color": "Printed Navy blue",
+    "description": "A blue printed cotton baggy tshirt",
+     "imgUrl":"https://assets.bonkerscorner.com/uploads/2022/06/15122155/Bonkerscorner_signature_ost03-1200x1800.jpg",
+     "add":"ADD",
+     "Category":"Men",
+     "size":"L"
+  },
+  {
+    "id": 3,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": 699,
+    "country": "India",
+    "color": "Printed black",
+    "description": "A black printed cap",
+     "imgUrl":"/imagefive.webp",
+     "add":"ADD",
+     "Category":"Men",
+  "size":"S"
+  },
+  {
+    "id": 4,
+    "name": "Oversized Tee",
+    "brand": "BundleBuddy",
+    "price": 999,
+    "country": "India",
+    "color": "Printed black",
+    "description": "A black printed cap",
+     "imgUrl":"/imagesix.webp",
+     "add":"ADD",
+     "Category":"Wommen",
+     "size":"M"
+  }
+]

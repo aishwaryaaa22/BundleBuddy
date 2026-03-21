@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1700,
+    "name": "Bag",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "White",
+    "description": "White printed Bag",
+    "imgUrl":"/Accone.webp",
+    "size":"M",
+    "category":"Bag"
+    
+  },
+  {
+    "id": 1800,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": "699/-",
+    "country": "India",
+    "color": "Green",
+    "description": "A Green printed cap",
+     "imgUrl":"/cap.webp",
+     "size":"L",
+     "category":"Cap"
+  },
+  {
+    "id": 1900,
+    "name": "2-pack Socks",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": ["Black", "White"],
+    "description": "Black White cotton Socks",
+     "imgUrl":"/Acctwo.webp",
+     "size":"S",
+     "category":"Socks"
+  },
+  {
+    
+     "id": 2300,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Beige",
+    "description": "Beige Cap",
+    "imgUrl":"/Accfive.webp",
+    "size":"L",
+    "category":"Cap"
+  },
+  {
+    
+    "id": 2100,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price":" 699/-",
+    "country": "India",
+    "color": "Yellow",
+    "description": "A Yellow Cap",
+     "imgUrl":"/Accfour.webp",
+     "size":"M",
+    "category":"Cap"
+
+  },
+  {
+    "id": 2200,
+    "name": "Socks",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "White",
+    "description": "White cotton socks",
+     "imgUrl":"/imageseven.webp",
+     "size":"L",
+    "category":"Socks"
+  },
+  {
+   "id": 2000,
+    "name": "Bag",
+    "brand": "BundleBuddy",
+    "price": "1200/-",
+    "country": "India",
+    "color": "Black",
+    "description": "Black printed Bag",
+    "imgUrl":"/Accthree.webp",
+    "size":"L",
+    "category":"Bag"
+  },
+  {
+    
+    "id": 2400,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": "699/-",
+    "country": "India",
+    "color": "Black",
+    "description": "A Black Cap",
+     "imgUrl":"/imagefivee.webp",
+     "size":"L",
+    "category":"Cap"
+  }
+]

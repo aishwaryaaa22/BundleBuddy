@@ -1,0 +1,20 @@
+.btnn{
+    display: flex;
+    gap: 5px;
+    
+}
+.btns{
+    padding: 2px;
+    border-radius: 2px;
+    border: 1px solid white;
+    font-size: medium;
+}
+.sidebar-label-container{
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.checkmark{
+    position: absolute;
+    border-radius: 10%;
+}

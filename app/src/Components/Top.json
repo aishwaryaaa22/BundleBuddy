@@ -1,0 +1,33 @@
+[
+  {
+    "id": 10,
+    "name": "T-shirt",
+    "brand": "BundleBuddy",
+    "price": 1200,
+    "country": "India",
+    "color": "Black",
+    "description": "Black baggy cotton T-shirt",
+    "imgUrl":"/one.png"
+  },
+  {
+    
+    "id": 20,
+    "name": "Cap",
+    "brand": "BundleBuddy",
+    "price": 699,
+    "country": "India",
+    "color": "Printed Green",
+    "description": "A Green printed cap",
+     "imgUrl":"/two.png"
+  },
+  {
+    "id": 30,
+    "name": "Lower",
+    "brand": "BundleBuddy",
+    "price": 1200,
+    "country": "India",
+    "color": "Black",
+    "description": "Black cotton lower",
+     "imgUrl":"/three.png"
+  }
+]
