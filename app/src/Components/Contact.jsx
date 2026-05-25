@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Footer from "./Footer";
+import AuthForm from "./AuthForm";
 
 function Contact() {
   return (

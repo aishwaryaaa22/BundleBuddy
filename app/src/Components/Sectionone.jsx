@@ -47,15 +47,10 @@ function Sectionone() {
         <section className="butt">
           <button className="glow-on-hover text-xl bg-blue-900 text-white px-6 py-0 mb-2 rounded-md font-bold mt-4 ">
             {" "}
-            <Link to="/FullFormByState">LOG IN</Link>
+            <Link to="/AuthForm">LOG IN</Link>
           </button>
         </section>
-         <section className="butt">
-          <button className="glow-on-hover text-xl bg-blue-900 text-white px-6 py-0 mb-2 rounded-md font-bold mt-4 ">
-            {" "}
-            <Link to="/FullFormByState">SIGN UP</Link>
-          </button>
-        </section>
+        
         </div>
       </div>
       <marquee direction="down" scrollamount="2" className="arrow">

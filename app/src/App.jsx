@@ -19,6 +19,8 @@ import { CartProvider } from "./Components/Context";
 import { WishlistProvider } from "./Components/Contexttwo";
 import Wishlist from "./Components/Wishlist";
 import ProductPage from "./Components/ProductPage";
+import AuthForm from "./Components/AuthForm";
+
 function App() {
   return (
     <>
@@ -28,7 +30,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Sectionone />} />
-            <Route path="/FullFormByState" element={<FullFormByState />} />
+            <Route path="/AuthForm" element={<AuthForm/>} />
             <Route path="/Sectiontwo" element={<Sectiontwo />} />
             <Route path="/Featured" element={<Featured />} />
             <Route path="/Cart" element={<Cart />} />
