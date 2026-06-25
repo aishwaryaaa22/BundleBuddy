@@ -4,7 +4,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Featured from "./Featured";
 import Email from "./Email";
-import Contact from "./Contact";
 import Footer from "./Footer";
 import Sectiontwo from "./Sectiontwo";
 import AOS from "aos";
@@ -75,10 +74,8 @@ function Sectionone() {
         <IoIosArrowDown />
       </marquee>
       <Sectiontwo />
-
       <Featured />
       <Email />
-      <Contact />
       <Footer />
     </>
   );

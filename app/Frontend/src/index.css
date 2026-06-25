@@ -1,1 +1,12 @@
 @import "tailwindcss";
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem; /* Scales down to fit mobile screens perfectly */
+    white-space: normal; /* Ensures the text wraps onto the next line if needed */
+  }
+}

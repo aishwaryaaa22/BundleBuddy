@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+.desktop-nav-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .ig{
       
     color:aliceblue;
@@ -9,6 +15,9 @@
     margin-top: 10px;
     align-items: center;
     justify-content: center;
+   justify-content: space-between; /* Keeps logo left, hamburger right */
+    padding-left: 15px;             /* Adds a clean buffer from the edges */
+   
     background-color: black;
 
 }
@@ -16,7 +25,7 @@
     display: flex;
     justify-content: center;
     color: #fff;
-    font-size: 100px;
+    font-size: 80px;
     font-family: fantasy;
     background-color: #000;
 }
@@ -121,6 +130,12 @@
     color: #ea5b5b;
     font-size: smaller;
 }
-
+@media screen and (max-width: 768px) {
+  
+  .desktop-nav-content {
+    display: none !important; 
+  }
+  
+}
 
 

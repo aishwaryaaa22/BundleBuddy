@@ -5,7 +5,6 @@ import Sectiontwo from "./Components/Sectiontwo";
 import Featured from "./Components/Featured";
 import Navbartwo from "./Components/Navbartwo";
 import Email from "./Components/Email";
-import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FullFormByState from "./Components/FullFormByState";
@@ -20,34 +19,33 @@ import Wishlist from "./Components/Wishlist";
 import ProductPage from "./Components/ProductPage";
 import AuthForm from "./Components/AuthForm";
 import MyGroups from "./Components/MyGroups";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
+import MainContact from "./Components/MainContact";
 
 function App() {
   return (
     <>
-    <Toaster position="top-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <CartProvider>
         <WishlistProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Sectionone />} />
-            <Route path="/AuthForm" element={<AuthForm/>} />
-            <Route path="/Sectiontwo" element={<Sectiontwo />} />
-            <Route path="/Featured" element={<Featured />} />
-            <Route path="/Cart" element={<Cart />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/ShopCollection" element={<ShopCollection />} />
-            <Route path="/Womenn" element={<Womenn />} />
-            <Route path="/Men" element={<Men />} />
-            <Route path="/Accessories" element={<Accessories />} />
-            <Route path="/product/:id" element={<ProductPage />} />
-            <Route path="/Wishlist" element={<Wishlist />} />
-            <Route path="/MyGroups" element={<MyGroups />} />
-
-            
-          </Routes>
-        </BrowserRouter>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Sectionone />} />
+              <Route path="/AuthForm" element={<AuthForm />} />
+              <Route path="/Sectiontwo" element={<Sectiontwo />} />
+              <Route path="/Featured" element={<Featured />} />
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/MainContact" element={<MainContact />} />
+              <Route path="/ShopCollection" element={<ShopCollection />} />
+              <Route path="/Womenn" element={<Womenn />} />
+              <Route path="/Men" element={<Men />} />
+              <Route path="/Accessories" element={<Accessories />} />
+              <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/Wishlist" element={<Wishlist />} />
+              <Route path="/MyGroups" element={<MyGroups />} />
+            </Routes>
+          </BrowserRouter>
         </WishlistProvider>
       </CartProvider>
     </>

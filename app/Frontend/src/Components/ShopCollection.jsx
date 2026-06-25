@@ -3,16 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image1 from "../assets/imagefive5.png";
-import Image2 from "../assets/imagefour4.png";
+import Image2 from "../assets/image3.png";
 import Image3 from "../assets/imageone1.png";
 import "./Shop.css";
 import Products from "./Products";
 import TopProducts from "./TopProducts";
 import Banner from "./Banner";
-
 import Footer from "./Footer";
 import Email from "./Email";
-
 
 const ImageList = [
   {
@@ -55,46 +53,68 @@ function ShopCollection() {
   return (
     <div>
       
-      <div className="relative overflow-hidden h-60 w-full sm:min-h-120  bg-gray-100 flex justify-center dark:bg-gray-950 dark:text-white duration-200">
-        <div className="h-full w-650 bg-black absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
-        <div className="container pb-8 sm:pb-0">
-          <Slider {...settings}>
-            {ImageList.map((data) => (
-              <div>
-                <div className="grid grid-cols-2 sm:grid-cols-3">
-                  <div className="flex flex-col gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm::order-1 relative z-10">
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold" data-aos="zoom-out" data-aos-duration="500" data-aos-once="true">
-                      {data.title}
-                    </h1>
-                    <p className="text-sm" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">{data.description}</p>
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                      <button className="btn btn-white btn-animate py-2 p-5  rounded-full cursor-pointer">
-                        Order Now
-                      </button>
-                    </div>
-                  </div>
-                  {/*Image*/}
-                  <div className="order-1 sm:order-2 flex justify-center ">
-                    <div className="relative z-10">
-                      <img
-                        src={data.img}
-                        alt="loading"
-                        className="w-300 h-100 sm:h-full sm:w-450 sm:scale-105 lg:scale-120 object-contain mx-auto"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
+<div className="relative overflow-hidden min-h-125 sm:min-h-150 lg:max-h-170 w-full bg-gray-100 flex items-center justify-center">
+  
+  <div className="h-full w-[150%] sm:w-[120%] lg:w-250 bg-black absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-10"></div>
+  
+  <div className="container px-4 py-8 md:py-12">
+    <Slider {...settings}>
+      {ImageList.map((data) => (
+        <div key={data.id} className="outline-none">
+          
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 min-h-100 md:min-h-125">
+            
       
-      <TopProducts/>
-       <Products/>
-      <Banner/>
-      <Email/>
-      <Footer/>
+            <div className="flex flex-col gap-4 text-center md:text-left order-2 md:order-1 flex-1 max-w-xl relative z-10">
+              <h1
+                className="text-4xl text-black sm:text-5xl lg:text-6xl font-bold leading-tight"
+                data-aos="zoom-out"
+                data-aos-duration="500"
+                data-aos-once="true"
+              >
+                {data.title}
+              </h1>
+              <p
+                className="text-sm md:text-base text-gray-600"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="100"
+              >
+                {data.description}
+              </p>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="300"
+              >
+                <button className="btn btn-white btn-animate py-3 px-6 rounded-full w-fit mx-auto md:mx-0 font-semibold shadow-md">
+                  Order Now
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content (Image Centered Vertically) */}
+            <div className="order-1 md:order-2 flex-1 flex justify-center items-center relative z-10 w-full">
+              <img
+                src={data.img}
+                alt={data.title}
+                className="w-full max-w-[320px] sm:max-w-100 lg:max-w-115 h-auto object-contain mx-auto"
+                style={{ display: 'block', margin: 'auto' }}
+              />
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </Slider>
+  </div>
+</div>
+
+      <TopProducts />
+      <Products />
+      <Banner />
+      <Email />
+      <Footer />
     </div>
   );
 }
