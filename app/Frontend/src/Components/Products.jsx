@@ -2,6 +2,7 @@ import React,{useContext} from "react";
 import Data from "./Data.json";
 import { createData } from "./Context";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 function Products() {
   const { addToCart } = useContext(createData);
   console.log(Data);
@@ -25,11 +26,13 @@ function Products() {
             <div key={product.id}>
               <div className="shadow-lg bg-white/5 p-4 rounded-2xl flex flex-col justify-between h-full w-full text-sm">
                  <Link to={`/product/${product.id}`}>
+                  <div className="w-full h-130 sm:h-130 rounded-xl overflow-hidden bg-neutral-900">
                   <img
-                    className="w-full h-auto max-w-xs object-cover cursor-pointer"
+                    className='w-full h-full object-cover object-top cursor-pointer group-hover:scale-105 transition-transform duration-300'
                     src={product.imgUrl}
                     alt="image loading"
                   />
+                  </div>
                   <p className="text-white text-xl sm:text-2xl font-bold mt-3 line-clamp-1">{product.name}</p>
                   <p>{product.description}</p>
                   <br />
@@ -52,6 +55,15 @@ function Products() {
           </div>
         </div>
       </div>
+      <div className=" flex justify-center mb-10">
+              <button
+                type="submit"
+                className="bg-[#e4edfe] hover:bg-[#4f5b6e] flex justify-center items-center gap-2 text-black font-bold py-3 px-10 rounded-full text-sm shadow-md tracking-wider transition-colors duration-200 cursor-pointer"
+              >
+                EXPLORE MORE
+                <FaArrowRight />
+              </button>
+            </div>
     </div>
   );
 }

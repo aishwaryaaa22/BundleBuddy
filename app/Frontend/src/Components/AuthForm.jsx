@@ -53,7 +53,7 @@ const AuthForm = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: name, // 👈 Name add karein (Screenshot 2026-04-30 005812.png)
+          name: name, 
           email: email,
           password: password,
         }),
@@ -66,7 +66,7 @@ const AuthForm = () => {
         alert("Signup Successful!");
         window.location.href = "/";
       } else {
-        // Yahan alert mein backend ka real message dikhayiye
+    
         const data = await response.json();
         alert(data.message || "Signup failed");
       }
@@ -75,14 +75,14 @@ const AuthForm = () => {
     }
   };
 
-  // SIGN UP / LOGIN VIEW (The missing return)
+  // SIGN UP / LOGIN VIEW 
   return (
     <div className="flex min-h-screen bg-gray-50">
       <div className="hidden lg:flex w-1/2 bg-[#1a1a1a] relative items-center justify-center p-12">
         <div className="relative z-10 text-white space-y-6">
           <img src={logo} alt="Logo" className="h-12 mb-8" />
           <h1 className="text-6xl font-black tracking-tight leading-none">
-            SHOP <br /> <span className="text-indigo-500">SMARTER.</span>
+            SHOP <br /> <span className="text-gray-400">SMARTER.</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-sm">
             Access exclusive collections and manage your orders.
@@ -98,7 +98,7 @@ const AuthForm = () => {
             </h2>
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-indigo-600 font-semibold hover:underline"
+              className="text-green-400 font-semibold hover:underline"
             >
               {isLogin
                 ? "Need an account? Sign up"
@@ -112,36 +112,36 @@ const AuthForm = () => {
           >
             {!isLogin && (
               <div className="relative">
-                <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700" />
                 <input
                   type="text"
                   placeholder="Full Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-green-500 transition-all"
                   required
                 />
               </div>
             )}
             <div className="relative">
-              <MdEmail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
+              <MdEmail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 text-xl" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email address"
-                className="w-full pl-12 pr-4 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full pl-12 pr-4 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-green-500 transition-all"
                 required
               />
             </div>
             <div className="relative">
-              <FaLock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+              <FaLock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700" />
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-12 pr-12 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                className="w-full pl-12 pr-12 py-4 bg-gray-50 rounded-2xl outline-none focus:ring-2 focus:ring-green-500 transition-all"
                 required
               />
               <button
@@ -154,7 +154,7 @@ const AuthForm = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-indigo-700 transition-all active:scale-95"
+              className="w-full bg-gray-500 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-green-400 transition-all active:scale-95"
             >
               {isLogin ? "Sign In" : "Create Account"}
             </button>

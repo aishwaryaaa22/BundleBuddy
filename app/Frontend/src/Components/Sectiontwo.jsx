@@ -11,7 +11,7 @@ import { IoMdTimer } from "react-icons/io";
 import Footer from "./Footer";
 import Email from "./Email";
 import Scanner from "./Scanner";
-import aboutimg from "../assets/image3.png";
+import aboutimg from "../assets/aboutimg.png";
 
 function Sectiontwo() {
   const settings = {
@@ -63,16 +63,17 @@ function Sectiontwo() {
               </p>
 
               <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
-                Every piece, from our premium heavyweight drops to our minimal
-                everyday accessories, is designed for those who navigate the
-                world with rhythm and purpose. We focus on premium construction,
-                utility-focused designs, and versatile fits that make a
-                statement without trying too hard.
+                Bundle Buddy converts traditional single-buyer shopping into a
+                team sport. We use smart algorithmic clustering to combine
+                individual demands into massive group discounts, directly from
+                manufacturers. We focus on premium construction, utility-focused
+                designs, and versatile fits that make a statement without trying
+                too hard.
               </p>
 
               <div className="pt-4">
                 <a
-                  href=""
+                  href="/shopcollection"
                   className="bg-[#434d5e] hover:bg-[#4f5b6e] text-white font-bold py-3 px-8 text-center rounded-full text-sm shadow-md tracking-wider transition-all duration-200 inline-block"
                 >
                   EXPLORE THE DROP

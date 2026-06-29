@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image1 from "../assets/imagefive5.png";
-import Image2 from "../assets/image3.png";
-import Image3 from "../assets/imageone1.png";
+import Image1 from "../assets/CAP.png";
+import Image2 from "../assets/MAIN.png";
+import Image3 from "../assets/aboutimg.png";
 import "./Shop.css";
 import Products from "./Products";
 import TopProducts from "./TopProducts";
@@ -14,23 +14,24 @@ import Email from "./Email";
 
 const ImageList = [
   {
-    id: 1,
-    img: Image1,
-    title: "Upto 50% on all accessories",
-    description:
-      "Buy the latest accessories in our collection and get upto 50% discount",
-  },
-  {
-    id: 2,
+     id: 2,
     img: Image2,
-    title: "Upto 10% on woman's clothing",
+    title: "Upto 10% on Woman's clothing",
     description:
       "Buy the latest accessories in our collection and get upto 50% discount",
   },
   {
     id: 3,
     img: Image3,
-    title: "Upto 10% on man's clothing",
+    title: "Upto 10% on Man's clothing",
+    description:
+      "Buy the latest accessories in our collection and get upto 50% discount",
+   
+  },
+  {
+     id: 1,
+    img: Image1,
+    title: "Upto 50% on all accessories",
     description:
       "Buy the latest accessories in our collection and get upto 50% discount",
   },
@@ -53,7 +54,7 @@ function ShopCollection() {
   return (
     <div>
       
-<div className="relative overflow-hidden min-h-125 sm:min-h-150 lg:max-h-170 w-full bg-gray-100 flex items-center justify-center">
+<div className="relative overflow-hidden min-h-125 sm:min-h-150 lg:max-h-180 w-full bg-gray-100 flex items-center justify-center">
   
   <div className="h-full w-[150%] sm:w-[120%] lg:w-250 bg-black absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-10"></div>
   
@@ -94,11 +95,11 @@ function ShopCollection() {
             </div>
 
             {/* Right Content (Image Centered Vertically) */}
-            <div className="order-1 md:order-2 flex-1 flex justify-center items-center relative z-10 w-full">
+            <div className="w-full h-full aspect-4/4 overflow-hidden  relative">
               <img
                 src={data.img}
                 alt={data.title}
-                className="w-full max-w-[320px] sm:max-w-100 lg:max-w-115 h-auto object-contain mx-auto"
+                className='w-full h-full object-cover object-top'
                 style={{ display: 'block', margin: 'auto' }}
               />
             </div>

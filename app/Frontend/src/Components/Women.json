@@ -7,7 +7,7 @@
     "country": "India",
     "color": "Black",
     "description": "Black baggy cotton T-shirt",
-    "imgUrl":"/black.jpg",
+    "imgUrl":"/main8.png",
     "size":"M",
     "category":"T-shirt"
     
@@ -20,7 +20,7 @@
     "country": "India",
     "color": "Black",
     "description": "A black printed cap",
-     "imgUrl":"/imagefivee.webp",
+     "imgUrl":"/cap2.png",
      "size":"L",
      "category":"Cap"
   },
@@ -32,21 +32,21 @@
     "country": "India",
     "color": "Black",
     "description": "Black cotton lower",
-     "imgUrl":"/lower.webp",
+     "imgUrl":"/wb2.png",
      "size":"S",
      "category":"Lower"
   },
   {
     "id": "400",
-    "name": "Hoodie",
+    "name": "T-shirt",
     "brand": "BundleBuddy",
     "price": 2000,
     "country": "India",
-    "color": "Green",
-    "description": "Green baggy cotton Hoodie",
-    "imgUrl":"/hoodie.jpg",
+    "color": "Pink",
+    "description": "Pink cotton T-shirt",
+    "imgUrl":"/main4.png",
     "size":"XS",
-    "category":"Hoodie"
+    "category":"T-shirt"
   },
   {
     
@@ -70,7 +70,7 @@
     "country": "India",
     "color": "White",
     "description": "White cotton socks",
-     "imgUrl":"/imageseven.webp",
+     "imgUrl":"/acc1.png",
      "size":"L",
     "category":"Socks"
   },
@@ -80,23 +80,23 @@
     "brand": "BundleBuddy",
     "price": 1200,
     "country": "India",
-    "color": "Black",
-    "description": "Black baggy cotton T-shirt",
-    "imgUrl":"/firse.webp",
+    "color": "Brown",
+    "description": "Brown baggy cotton T-shirt",
+    "imgUrl":"/main6.png",
     "size":"S",
     "category":"T-shirt"
   },
   {
     
     "id": "800",
-    "name": "T-shirt",
+    "name": "Lower",
     "brand": "BundleBuddy",
     "price": 699,
     "country": "India",
     "color": "Beige",
-    "description": "A Beige T-shirt",
-     "imgUrl":"/beige.webp",
+    "description": "A Beige Lower",
+     "imgUrl":"/wb3.png",
      "size":"L",
-    "category":"T-shirt"
+    "category":"Lower"
   }
 ]

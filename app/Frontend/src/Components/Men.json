@@ -7,7 +7,7 @@
     "country": "India",
     "color": "Black",
     "description": "Black baggy cotton T-shirt",
-    "imgUrl":"/imagethree.jpg",
+    "imgUrl":"/man1.png",
     "size":"M",
     "category":"T-shirt"
     
@@ -30,9 +30,9 @@
     "brand": "BundleBuddy",
     "price": 1200,
     "country": "India",
-    "color": "Black",
-    "description": "Black cotton lower",
-     "imgUrl":"/Mentwo.webp",
+    "color": "Dark Brown",
+    "description": "Dark Brown cotton lower",
+     "imgUrl":"/mb2.png",
      "size":"S",
      "category":"Lower"
   },
@@ -42,8 +42,8 @@
     "brand": "BundleBuddy",
     "price": 1200,
     "country": "India",
-    "color": "Green",
-    "description": "Green baggy jacket",
+    "color": "White",
+    "description": "White Printed baggy jacket",
     "imgUrl":"/Menfour.jpg",
     "size":"L",
     "category":"Jacket"
@@ -70,7 +70,7 @@
     "country": "India",
     "color": "White",
     "description": "White cotton socks",
-     "imgUrl":"/imageseven.webp",
+     "imgUrl":"/acc1.png",
      "size":"L",
     "category":"Socks"
   },
@@ -95,7 +95,7 @@
     "country": "India",
     "color": "Beige",
     "description": "A Beige T-shirt",
-     "imgUrl":"/beige.webp",
+     "imgUrl":"/man3.png",
      "size":"L",
     "category":"T-shirt"
   }

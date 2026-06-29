@@ -4,10 +4,12 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const http = require("http");
+const nodemailer = require('nodemailer');
+//const cron = require('node-cron');
 const { Server } = require("socket.io");
 const app = express();
 const auth = (req, res, next) => {
-  // Header se token nikaalein
+ 
   const token = req.header("Authorization")?.replace("Bearer ", "");
 
   if (!token) {
@@ -15,10 +17,10 @@ const auth = (req, res, next) => {
   }
 
   try {
-    // Token verify karein
+   
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "secretkey123");
-    req.user = decoded; // User ki info request mein daal dein
-    next(); // Agle step par bhejein
+    req.user = decoded; 
+    next(); 
   } catch (err) {
     res.status(401).json({ message: "Token is not valid" });
   }
@@ -26,12 +28,12 @@ const auth = (req, res, next) => {
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Body parser: Iske bina 400 error aata hai
-const server = http.createServer(app); // Express ko http server mein lapet de
+app.use(express.json()); 
+const server = http.createServer(app); 
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:5173", // Aapka frontend URL
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
 });
@@ -48,18 +50,121 @@ const groupSchema = new mongoose.Schema({
   productPrice: Number,
   productImage: String,
   expiryDate: Date,
-  // Location object alag rakhein
+
   location: {
     type: { type: String, default: "Point" },
-    coordinates: { type: [Number], required: true }, // [lng, lat]
+    coordinates: { type: [Number], required: true }, 
   },
   optimizedPrice: { type: Number, default: 0 },
-  // Inhe bahar nikaal diya hai
+
   maxMembers: { type: Number, default: 5 },
   currentMembers: { type: Number, default: 0 },
 });
 
-// Indexing hamesha model banane se PEHLE ya turant baad karein
+//nodemailer
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: "aishwarya056789@gmail.com", 
+    pass: "jdrl edeo vflq diaw"  
+  }
+});
+
+// Route for Contact Section
+app.post('/api/contact', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'All fields are required.' });
+  }
+
+  const mailOptions = {
+    from: "aishwarya056789@gmail.com",
+    to: "aishwarya056789@gmail.com",
+    replyTo: email, 
+    subject: ` New Contact Form Message from ${name}`,
+    html: `
+      <div style="font-family: sans-serif; padding: 20px; background-color: #f4f4f4;">
+        <h2 style="color: #333;">New Message Received</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <div style="background-color: #fff; padding: 15px; border-left: 4px solid #434d5e; border-radius: 4px;">
+          ${message}
+        </div>
+      </div>
+    `
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ success: true, message: 'Email sent successfully!' });
+  } catch (error) {
+    console.error('Nodemailer Error:', error);
+    res.status(500).json({ error: 'Failed to dispatch email notification.' });
+  }
+});
+
+// //cronjob
+// cron.schedule('0 * * * *', async () => {
+//   console.log(' [CRON] Starting automated check for active Bundle pools...');
+  
+//   try {
+//     const currentTime = new Date();
+
+//     console.log(' [CRON] Automated bundle pool processing completed clean.');
+//   } catch (error) {
+//     console.error(' [CRON] Error executing bundle check job:', error);
+//   }
+// });
+
+//nodemailer for subscription 
+app.post('/api/subscribe', async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required to subscribe.' });
+  }
+
+  const mailOptions = {
+    from: "aishwarya056789@gmail.com",
+    to: email,                     
+    subject: '🎉 Subscribed to Bundle Buddy!',
+    html: `
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+        <div style="background-color: #171717; padding: 20px; text-align: center; border-radius: 6px 6px 0 0;">
+          <h1 style="color: #ffffff; margin: 0; letter-spacing: 2px; font-size: 24px;">BUNDLE BUDDY</h1>
+        </div>
+        <div style="padding: 30px; line-height: 1.6; color: #333333;">
+          <h2 style="color: #171717;">Welcome to the Bundle Buddy! </h2>
+          <p>Thank you for subscribing to our exclusive drops newsletter. You are now officially part of the squad.</p>
+          
+          <div style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #434d5e; margin: 20px 0; border-radius: 4px;">
+            <p style="margin: 0; font-weight: bold; color: #434d5e;"></p>
+            <p style="margin: 5px 0 0 0;">As promised, use code <strong>BUDDY5</strong> at checkout to get 5% off on your first group purchase!</p>
+          </div>
+
+          <p>We will keep you updated with early access to custom drops, community targets, and upcoming collection launches.</p>
+          <p style="margin-top: 30px;">Stay tuned,<br><strong>Team Bundle Buddy</strong></p>
+        </div>
+        <div style="background-color: #f4f4f4; padding: 15px; text-align: center; font-size: 12px; color: #777777; border-radius: 0 0 6px 6px;">
+          <p style="margin: 0;">You received this email because you subscribed on our website.</p>
+          <p style="margin: 5px 0 0 0;">Delhi, India</p>
+        </div>
+      </div>
+    `
+  };
+  try {
+    
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ success: true, message: 'Subscribed successfully!' });
+  } catch (error) {
+    console.error('Subscription Mail Error:', error);
+    res.status(500).json({ error: 'Failed to complete subscription registration.' });
+  }
+});
+
+
 groupSchema.index({ location: "2dsphere" });
 
 const Group = mongoose.model("Group", groupSchema);
@@ -67,7 +172,7 @@ const Group = mongoose.model("Group", groupSchema);
 // group join
 const joinedGroupSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  productId: { type: String, required: true }, // Product ki ID
+  productId: { type: String, required: true }, 
   productName: String,
   productPrice: Number,
   productName: String,
@@ -83,7 +188,7 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  isVerified: { type: Boolean, default: true }, // OTP hata diya isliye true
+  isVerified: { type: Boolean, default: true }, 
 });
 
 const User = mongoose.model("User", userSchema);
@@ -114,19 +219,17 @@ app.post("/api/subscribe", async (req, res) => {
     }
 });
 
-// 3. Signup Route (Directly in server.js)
+// Signup Route
 app.post("/api/auth/signup", async (req, res) => {
   const { name, email, password } = req.body;
 
-  console.log("Request Received:", req.body); // Debugging ke liye
+  console.log("Request Received:", req.body); 
 
   try {
-    // Validation
     if (!name || !email || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    // Check if user exists
     let user = await User.findOne({ email });
     if (user) {
       return res
@@ -136,9 +239,8 @@ app.post("/api/auth/signup", async (req, res) => {
 
     // Create New User
     user = new User({ name, email, password });
-    await user.save();
+    await user.save()
 
-    // Generate Token
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET || "secretkey123",
@@ -156,7 +258,7 @@ app.post("/api/auth/signup", async (req, res) => {
   }
 });
 
-// 4. Login Route (Directly in server.js)
+// Login Route 
 app.post("/api/auth/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -195,32 +297,29 @@ app.post("/api/groups/join", auth, async (req, res) => {
 
     console.log("Image received in backend:", productImage);
 
-    // 1. Database mein group dhoondho
     let group = await Group.findOne({ productId: productId });
-    console.log("Database se mila data:", group);
+    console.log("Data from database:", group);
 
-    // 2. Agar group nahi mila, toh naya create karein
     if (!group) {
-      console.log("Naya group create ho raha hai...");
+      console.log("New group can be created...");
       group = new Group({
         productId,
         productName,
         productPrice,
         productImage,
-        location, // Frontend se [longitude, latitude] aana chahiye
+        location,
         maxMembers: 5,
         currentMembers: 0,
       });
     }
 
-    // 3. Members update karein (Safety check ke saath)
+  
     if (group.currentMembers < (group.maxMembers || 5)) {
     group.currentMembers += 1;
     await group.save();
 let optimizedPrice = null;
-    // --- GEMINI PRICE OPTIMIZATION START ---
     try {
-        // Hum AI ko tabhi call karenge jab 2 ya zyada log ho jayein
+       
         const members = group.currentMembers;
 const basePrice = group.productPrice;
 const fakeOptimizedPrice = basePrice - (members * 100); 
@@ -280,7 +379,6 @@ app.get("/api/my-groups", auth, async (req, res) => {
   }
 });
 
-// Kisi specific joined bundle ko delete karne ke liye
 app.delete("/api/my-groups/:id", auth, async (req, res) => {
   try {
     const bundleId = req.params.id;
@@ -304,7 +402,7 @@ app.delete("/api/my-groups/:id", auth, async (req, res) => {
 });
 app.get("/api/bundles/nearby", async (req, res) => {
   try {
-    const { lat, lng } = req.query; // Frontend se user ki location ayegi
+    const { lat, lng } = req.query; 
 
     if (!lat || !lng) {
       return res
@@ -317,9 +415,9 @@ app.get("/api/bundles/nearby", async (req, res) => {
         $near: {
           $geometry: {
             type: "Point",
-            coordinates: [parseFloat(lng), parseFloat(lat)], // User coordinates
+            coordinates: [parseFloat(lng), parseFloat(lat)], 
           },
-          $maxDistance: 5000, // Distance in meters (5000m = 5km)
+          $maxDistance: 5000, 
         },
       },
     });
@@ -333,7 +431,6 @@ app.post("/api/groups/finalize/:groupId", async (req, res) => {
   const { groupId } = req.params;
 
   try {
-    // Option A: Agar aap chahti hain ki finalize hote hi bundle delete ho jaye
     const deletedGroup = await Group.findByIdAndDelete(groupId);
 
     if (!deletedGroup) {

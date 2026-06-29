@@ -5,9 +5,9 @@
     "brand": "BundleBuddy",
     "price":  1200,
     "country": "India",
-    "color": "White",
-    "description": "White printed Bag",
-    "imgUrl":"/Accone.webp",
+    "color": "Beige",
+    "description": "Beige printed Bag",
+    "imgUrl":"/bag2.png",
     "size":"M",
     "category":"Bag"
     
@@ -30,9 +30,9 @@
     "brand": "BundleBuddy",
     "price":  1200,
     "country": "India",
-    "color": ["Black", "White"],
-    "description": "Black White cotton Socks",
-     "imgUrl":"/Acctwo.webp",
+    "color": "Beige",
+    "description": "Beige cotton Socks",
+     "imgUrl":"/acc2.png",
      "size":"S",
      "category":"Socks"
   },
@@ -43,9 +43,9 @@
     "brand": "BundleBuddy",
     "price":  1200,
     "country": "India",
-    "color": "Beige",
-    "description": "Beige Cap",
-    "imgUrl":"/Accfive.webp",
+    "color": "Brown",
+    "description": "Brown Cap",
+    "imgUrl":"/cap1.png",
     "size":"L",
     "category":"Cap"
   },
@@ -56,9 +56,9 @@
     "brand": "BundleBuddy",
     "price":  699,
     "country": "India",
-    "color": "Yellow",
-    "description": "A Yellow Cap",
-     "imgUrl":"/Accfour.webp",
+    "color": "Black",
+    "description": "A Black Cap",
+     "imgUrl":"/cap2.png",
      "size":"M",
     "category":"Cap"
 
@@ -71,7 +71,7 @@
     "country": "India",
     "color": "White",
     "description": "White cotton socks",
-     "imgUrl":"/imageseven.webp",
+     "imgUrl":"/acc1.png",
      "size":"L",
     "category":"Socks"
   },
@@ -83,7 +83,7 @@
     "country": "India",
     "color": "Black",
     "description": "Black printed Bag",
-    "imgUrl":"/Accthree.webp",
+    "imgUrl":"/bag1.png",
     "size":"L",
     "category":"Bag"
   },
@@ -94,9 +94,9 @@
     "brand": "BundleBuddy",
     "price": 699,
     "country": "India",
-    "color": "Black",
-    "description": "A Black Cap",
-     "imgUrl":"/imagefivee.webp",
+    "color": "Beige",
+    "description": "A Beige Cap",
+     "imgUrl":"/bag3.png",
      "size":"L",
     "category":"Cap"
   }
