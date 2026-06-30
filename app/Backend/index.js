@@ -65,8 +65,8 @@ const groupSchema = new mongoose.Schema({
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "aishwarya056789@gmail.com", 
-    pass: "jdrl edeo vflq diaw"  
+    user: "Bundlebuddysupport@gmail.com", 
+    pass: "ijdp ryfa zebe cotg"  
   }
 });
 
@@ -79,8 +79,8 @@ app.post('/api/contact', async (req, res) => {
   }
 
   const mailOptions = {
-    from: "aishwarya056789@gmail.com",
-    to: "aishwarya056789@gmail.com",
+    from: "Bundlebuddysupport@gmail.com",
+    to: "Bundlebuddysupport@gmail.com",
     replyTo: email, 
     subject: ` New Contact Form Message from ${name}`,
     html: `
@@ -127,7 +127,7 @@ app.post('/api/subscribe', async (req, res) => {
   }
 
   const mailOptions = {
-    from: "aishwarya056789@gmail.com",
+    from: "Bundlebuddysupport@gmail.com",
     to: email,                     
     subject: '🎉 Subscribed to Bundle Buddy!',
     html: `
